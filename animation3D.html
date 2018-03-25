@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>春天的早晨</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: url("images/bg.jpg") no-repeat;
+            background-size: cover;
+            overflow: hidden;
+        }
+        body ul:nth-child(1){
+            height: 600px;
+            position: relative;
+            overflow: hidden;
+        }
+        body ul:nth-child(1) li{
+            list-style: none;
+            width: 400%;
+            height: 10%;
+            position: absolute;
+            left: 0;
+            top: -80px;
+        }
+        body ul:nth-child(1) li:nth-child(1){
+            animation: one 30s linear 0s 5 alternate;
+        }
+        body ul:nth-child(1) li:nth-child(2){
+            animation: two 30s linear 0s 10 alternate;
+        }
+        body ul:nth-child(1) li:nth-child(3){
+            animation: three 30s linear 0s infinite alternate;
+        }
+        @keyframes one {
+            from{
+                margin-left: 0;
+            }
+            to{
+                margin-left: -100%;
+            }
+        }
+        @keyframes two {
+            from{
+                margin-left: 0;
+            }
+            to{
+                margin-left: -200%;
+            }
+        }
+        @keyframes three {
+            from{
+                margin-left: 0;
+            }
+            to{
+                margin-left: -300%;
+            }
+        }
+        body ul:nth-child(2){
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            margin-left: -100px;
+            transform-style: preserve-3d;
+            animation: sport 12s linear 0s infinite normal;
+        }
+        body ul:nth-child(2) li{
+            list-style: none;
+            width: 200px;
+            height: 200px;
+            font-size: 60px;
+            text-align: center;
+            line-height: 200px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: black;
+        }
+        body ul:nth-child(2) li:nth-child(1){
+            transform: rotateY(60deg) translateZ(200px);
+        }
+        body ul:nth-child(2) li:nth-child(2){
+            transform: rotateY(120deg) translateZ(200px);
+        }
+        body ul:nth-child(2) li:nth-child(3){
+            transform: rotateY(180deg) translateZ(200px);
+        }
+        body ul:nth-child(2) li:nth-child(4){
+            transform: rotateY(240deg) translateZ(200px);
+        }
+        body ul:nth-child(2) li:nth-child(5){
+            transform: rotateY(300deg) translateZ(200px);
+        }
+        body ul:nth-child(2) li:nth-child(6){
+            transform: rotateY(360deg) translateZ(200px);
+        }
+        body ul:nth-child(2) li img{
+            width: 200px;
+            height: 200px;
+            border: 5px solid skyblue;
+            box-sizing: border-box;
+        }
+        body ul:nth-child(2):hover{
+            animation-play-state: paused;
+        }
+        body ul:nth-child(2):hover li img{
+            opacity: 0.5;
+        }
+        body ul:nth-child(2) li:hover img{
+            opacity: 1;
+        }
+        @keyframes sport {
+            from{
+                transform: rotateX(-10deg) rotateY(0deg);
+            }
+            to{
+                transform: rotateX(-10deg) rotateY(360deg);
+            }
+        }
+        .bird{
+            width: 173px;
+            height: 157px;
+            position: absolute;
+            left: 20px;
+            bottom: 140px;
+            animation: fly 10s linear 0s 1 normal;
+        }
+        @keyframes fly {
+            0%{
+                left: 18px;
+                bottom: 140px;
+            }
+            20%{
+                left: 160px;
+                bottom: 300px;
+            }
+            80%{
+                left: 800px;
+                bottom: 320px;
+            }
+            100%{
+                left: 1300px;
+                bottom: -10px;
+            }
+        }
+        .birds{
+            width: 400px;
+            height: 360px;
+            position: absolute;
+            left: 0px;
+            bottom: 300px;
+            animation: flying 20s linear 0s infinite normal;
+        }
+        @keyframes flying {
+           from{
+                left: 0px;
+            }
+            to{
+                left: 1300px;
+            }
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><img src="images/cloud_one.png" alt=""></li>
+    <li><img src="images/cloud_two.png" alt=""></li>
+    <li><img src="images/cloud_three.png" alt=""></li>
+</ul>
+<ul>
+    <li><img src="images/timg1.jpg" alt=""></li>
+    <li><img src="images/timg2.jpg" alt=""></li>
+    <li><img src="images/timg3.jpg" alt=""></li>
+    <li><img src="images/timg4.jpg" alt=""></li>
+    <li><img src="images/timg5.jpg" alt=""></li>
+    <li><img src="images/timg6.jpg" alt=""></li>
+</ul>
+<img src="images/小鸟1.png" class="bird">
+<img src="images/小鸟2.png" class="birds">
+<audio src="http://m10.music.126.net/20180325220025/eb1f0d1b0a83e688ad036996e56b56fa/ymusic/58f0/4a54/cac7/3e04bc151d8226551bb0d5dce875dd6b.mp3" autoplay="autoplay" loop="loop"></audio>
+</body>
+</html>
